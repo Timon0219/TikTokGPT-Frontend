@@ -3,8 +3,8 @@ import { ChatMessageType, ModalList, useSettings, useMetrics } from "../store/st
 
 const apiUrl = "https://api.openai.com/v1/chat/completions";
 const IMAGE_GENERATION_API_URL = "https://api.openai.com/v1/images/generations";
-const RagSearchUrl = 'http://localhost:8000/query';
-
+const RagSearchUrl = 'https://minimum-willa-verifiagent-4bab1aa3.koyeb.app/query';
+// const RagSearchUrl = 'http://localhost:8000/query';
 let query_time: number[] =  []
 let relevancy_score: number[] = []
 let total_queries: number[] = []
