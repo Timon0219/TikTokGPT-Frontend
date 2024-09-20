@@ -10,6 +10,7 @@ import classNames from "classnames";
 import Chats from "./components/Chat/Chats";
 import Metrics from "./components/Metrics/Metrics";
 
+const apiKey = process.env.OPENAI_API_KEY || ''
 setupIonicReact();
 interface MetricContextType {
   metrics: any;
@@ -29,7 +30,6 @@ function App() {
   const isChatsVisible = useChat(chatsLength);
   const addNewChat = useChat((state) => state.addNewChat);
   const [theme] = useTheme((state) => [state.theme]);
-  const apiKey = 'sk--wgT5Os0yh65yiaLY39ycJii98y9zQ6Y4alSi4dQ48T3BlbkFJHZHitsUUCDO48X3MDSWMFdtpeotEy71XvyQMBpf8cA';
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
