@@ -117,6 +117,8 @@ export interface SettingsType {
   };
   modalsList: readonly string[];
   isTikTokGeneratorModalVisible: boolean;
+  isSystemMessageModalVisible: boolean;
+  setSystemMessageModalVisible: (value: boolean) => void;
   isModalVisible: boolean;
   setSystemMessage: (value: SystemMessageType) => void;
   setTikTokGeneratorModalVisible: (value: boolean) => void;
@@ -319,6 +321,10 @@ const useSettings = createWithEqualityFn<SettingsType>()(
       },
       modalsList: modalsList,
       isTikTokGeneratorModalVisible: false,
+      isSystemMessageModalVisible: false,
+      setSystemMessageModalVisible(value) {
+        
+      },
       isModalVisible: false,
       setSystemMessage: (value) => {
         set(
